@@ -28,6 +28,6 @@ Import this directory as a Git repository in Vercel and select the Next.js prese
 - Contact CTAs use the supplied Instagram profile. Replace with a confirmed business email or booking link when available.
 - Social tiles are studio brand explorations linking to Instagram, not an embedded live feed.
 - No tracking scripts, contact-data collection or cookies are added.
-- Reduced-motion settings disable looping motion and scroll effects.
+- Full motion starts automatically; there is no motion toggle or stored opt-in. Desktop-only pointer effects stay disabled on touch devices.
 
 Main content and reusable interaction components: `components/agency.tsx`. Design tokens and responsive styling: `app/globals.css`. SEO: `app/layout.tsx`.

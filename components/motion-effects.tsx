@@ -61,8 +61,8 @@ export default function MotionEffects() {
       restart();
       dispose=()=>{cancelAnimationFrame(frame);observer.disconnect();heroObserver.disconnect();resize.disconnect();hero.removeEventListener('pointermove',pointer);hero.removeEventListener('pointerleave',leave);document.removeEventListener('visibilitychange',visibility);art.style.translate='';art.style.rotate='';ctx.clearRect(0,0,width,height);moving.forEach(el=>el.classList.remove('motion-visible'));document.documentElement.classList.remove('motion-hidden');};
     };
-    setup();reduced.addEventListener('change',setup);
-    return ()=>{dispose();reduced.removeEventListener('change',setup);};
+    setup();
+    return ()=>{dispose();};
   },[]);
   return <canvas ref={canvas} className="cosmic-particles" aria-hidden="true"/>;
 }

@@ -88,7 +88,7 @@ html[data-motion="reduced"]{.hero-line>span{transform:none}.hero-art{will-change
 @media(max-width:900px),(pointer:coarse){.experience-cursor,.cursor-atmosphere{display:none}.launch-curtain{animation-duration:1.2s}.hero-line>span{animation-delay:.6s}.hero-line-gold>span{animation-delay:.75s}}
 html[data-motion="reduced"]{.launch-curtain,.cursor-atmosphere,.experience-cursor{display:none}.hero-copy{opacity:1!important;translate:none!important}}
 
-.motion-switch{position:fixed;bottom:18px;right:18px;z-index:110;background:#0e1420eb;border:1px solid #70603e;border-radius:8px;padding:11px 15px;text-align:left;font-size:12px;color:#e1c48c;box-shadow:0 4px 20px #0004}.motion-switch span{display:block;font-size:10px;color:#aaaeb8;margin-top:4px}html[data-motion="reduced"]{scroll-behavior:auto}html[data-motion="reduced"] .motion-switch{animation:none!important}
+html[data-motion="reduced"]{scroll-behavior:auto}html[data-motion="reduced"] 
 
 /* Custom pointer activates only after a real mouse event; native pointer is the fallback. */
 .cursor-core{position:fixed;left:0;top:0;z-index:112;pointer-events:none;opacity:0;will-change:transform}.cursor-core::after{content:'';position:absolute;left:-3px;top:-3px;width:6px;height:6px;border-radius:50%;background:#f1d79c;box-shadow:0 0 9px #d6b77766}.cursor-core.cursor-active{opacity:1}.experience-cursor{z-index:111}.experience-cursor>div{border-color:#d6b777b3}.cursor-atmosphere{z-index:109}

@@ -91,8 +91,8 @@ export default function ExperienceMotion() {
       resize();scheduleScroll();
       cleanup=()=>{cancelAnimationFrame(scrollFrame);cancelAnimationFrame(pointerFrame);mutation.disconnect();window.removeEventListener('scroll',scheduleScroll);window.removeEventListener('resize',resize);document.removeEventListener('pointermove',pointer);document.removeEventListener('pointerleave',leave);document.removeEventListener('visibilitychange',visibility);stage.classList.remove('work-stack');cards.forEach(card=>{card.style.scale='';card.style.removeProperty('--stack-shade');});if(hero){hero.style.translate='';hero.style.opacity='';}cursor.classList.remove('cursor-active');dot.current?.classList.remove('cursor-active');document.documentElement.classList.remove('custom-cursor-ready');ctx.clearRect(0,0,innerWidth,innerHeight);};
     }
-    setup();preference.addEventListener('change',setup);desktop.addEventListener('change',setup);
-    return()=>{cleanup();preference.removeEventListener('change',setup);desktop.removeEventListener('change',setup);};
+    setup();desktop.addEventListener('change',setup);
+    return()=>{cleanup();desktop.removeEventListener('change',setup);};
   },[]);
   return <><div className="launch-curtain" aria-hidden="true"><div className="launch-mark">BRAND <span>ORBITA</span><small>PREPARE FOR A NEW TRAJECTORY</small></div><div className="launch-line"/></div><canvas ref={smoke} className="cursor-atmosphere" aria-hidden="true"/><div ref={dot} className="cursor-core" aria-hidden="true"/><div ref={ring} className="experience-cursor" aria-hidden="true"><div><span>EXPLORE ↗</span></div></div></>;
 }
